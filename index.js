@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
-const API_URL = "https://runor9.postman.co/workspace/78ac7db0-f739-4f76-9e9f-5fa111a4e346/api/5f0ca236-04a2-40f6-9e81-2cdb57b45aad/collection/32950013-acd9c1ae-379b-4210-8721-9a61907badf8?action=share&source=copy-link&creator=32950013&branch=main";
+const API_URL = "https://8xpz4c-4000.csb.app";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
