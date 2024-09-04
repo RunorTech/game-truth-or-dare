@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
-const API_URL = "https://8xpz4c-4000.csb.app";
+const API_URL = "https://game-truth-or-dare.onrender.com";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
