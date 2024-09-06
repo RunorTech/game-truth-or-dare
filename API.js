@@ -5,9 +5,17 @@ import cors from 'cors';
 const app = express();
 const port = 4000;
 
+const allowedOrigins = [http://localhost:3000', 'https://project-zeta-gray.vercel.app'];
+
 // Configure CORS
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with the origin you want to allow
+    origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }, // Replace with the origin you want to allow
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
