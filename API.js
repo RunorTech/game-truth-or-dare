@@ -1,9 +1,16 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cors from 'cors';
 
 const app = express();
 const port = 4000;
-const masterKey = "4VUP2DZ-6EWM4SJ-N6FGRHV-Z3PR3TT";
+
+// Configure CORS
+app.use(cors({
+  origin: 'http://localhost:3000', // Replace with the origin you want to allow
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
