@@ -5,7 +5,7 @@ import cors from 'cors';
 const app = express();
 const port = 4000;
 
-const allowedOrigins = [http://localhost:3000', 'https://project-zeta-gray.vercel.app'];
+const allowedOrigins = ['http://localhost:3000', 'https://project-zeta-gray.vercel.app'];
 
 // Configure CORS
 app.use(cors({
